@@ -19,7 +19,7 @@
 Alternatively, you can clone this repository and install the extension manually:
 
 ```bash
-git clone https://github.com/votre-repo.git
+git clone https://github.com/CorwinFr/x3-4gl-tools.git
 ```
 
 ## Usage
@@ -42,4 +42,4 @@ This project is open-source and licensed under the [MIT License](LICENSE).
 
 ## About
 
-This extension was created by **Guillaume Clément**, a passionate developer who loves enhancing the Sage X3 development experience. Whether you're a beginner or an expert in Sage X3 4GL, this tool aims to simplify your work and save you time.
+This extension was created by [Guillaume CLEMENT](https://www.linkedin.com/in/guillaume-clement-erp-cloud/), a passionate developer who loves enhancing the Sage X3 development experience. Whether you're a beginner or an expert in Sage X3 4GL, this tool aims to simplify your work and save you time.
