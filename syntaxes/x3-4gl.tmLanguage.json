@@ -1,0 +1,84 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Sage X3 4GL",
+    "patterns": [
+        { "include": "#labels" },
+        { "include": "#keywords" },
+        { "include": "#types" },
+        { "include": "#functions" },
+        { "include": "#instructions" },
+        { "include": "#variables_or_methods" },
+        { "include": "#strings" },
+        { "include": "#comments" },
+        { "include": "#numbers" },
+        { "include": "#operators" },
+        { "include": "#system_variables" }
+    ],
+    "repository": {
+        "labels": {
+            "patterns": [
+                {
+                    "name": "keyword.control.label.x3-4gl",
+                    "match": "\\$[A-Za-z0-9_]+"
+                }
+            ]
+        },
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.flow.x3-4gl",
+                    "match": "(?<![A-Za-z0-9_$])(?i:When|Case|If|Elsif|Else|Endif|For|Next|Repeat|Until|While|Wend|Break|Subprog|Funprog|Gosub|Call|From|Then|Return|Goto|Loop|Continue|Exit|Onerrgo|Onintgo|Resume|End)(?![A-Za-z0-9_$])"
+                }
+            ]
+        },
+        "types": {
+            "name": "storage.type.x3-4gl",
+            "match": "(?<![A-Za-z0-9_$])(?i:Integer|Shortint|Tinyint|Decimal|Double|Float|Char|Schar|Date|Datetime|Clbfile|Blbfile|File|Mask|Instance|Uuident|Libelle|Extern)(?![A-Za-z0-9_$])"
+        },
+        "functions": {
+            "name": "support.function.x3-4gl",
+            "match": "(?<![A-Za-z0-9_$])(?i:abs|ach|acos|addmonth|adxmac|adxpno|adxseek|adxtcp|adxuid|allocgrp|anp|ar2|arr|ascii|ash|asin|atan|atan2|ath|avg|aweek|B64Decode|B64Encode|cast|ch|checkpath|chr\\$|clalev|clanam|clanbs|clasiz|clavar|clacmp|closelog|cnp|cos|ctrans|date\\$|datetime\\$|day|day\\$|dayn|delfile|dim|dir\\$|eomonth|errl|errm|errmes\\$|errn|errp|escjson|evalue|evalueSData|exp|fac|filexist|filinfo|filpath|find|fix|fmet|format\\$|freeheap|freemem|freesnapshot|func|gdat\\$|gdatetime\\$|getBit|getenv\\$|getlogname|getmodified|Getuuid|Heapdmp|instr|int|left\\$|len|ln|lobsize|log|max|maxtab|mess|mid\\$|min|mod|modified|month|month\\$|nbrecord|nday|nday\\$|NewInstance|not|null|Nulluuid|num\\$|objectexist|objectnbs|objecttype|objectvar|openlog|parse|pat|pi|prd|renamefile|reverttosnapshot|revertupdtick|right\\$|rnd|rowcount|seg\\$|setBit|sgn|sh|sigma|sin|space\\$|sqr|strDecode|strEncode|string\\$|sum|tan|th|time|time\\$|timestamp\\$|tolower|toSData|toupper|Touuid|trtcou|type|unescjson|uni|uniqid|uuid\\$|val|var|ver\\$|vireblc|week|Xgetchar|xor|year|Affzo|Field|Formula)(?![A-Za-z0-9_$])"
+        },
+        "instructions": {
+            "name": "keyword.other.x3-4gl",
+            "match": "(?<![A-Za-z0-9_$])(?i:Anasql|Append|As|Asc|Assign|Blbfile|Break|By|Call|Callilog|Calliu|Callocx|Callui|Case|Char|Chgfmt|Chgtbk|Chgtfd|Chgstl|Chgtzn|Clbfile|Close|Close\\s+Mask|Columns|Commit|Const|Contains\\$|Copfile|Curr|Date|Datetime|Dbgaff|Decimal|Default|Dela|Delete|DeleteByKey|Delfile|Desc|Disable|Discombo|Dislbox|Diszo|Double|Else|Elsif|Enable|End|Endcase|Endif|Envzo|Execsql|Extern|Extended|Field|Fillbox|Filter|First|Float|Flush|Formula|For|FreeGroup|FreeInstance|FreeSnapshot|From|Funprog|Getseq|Getui|Global|Gosub|Goto|Grizo|Hint|If|Insa|Instance|Integer|Inter|Iomode|Key|Kill|Last|Leftbox|Libelle|Link|Listimp|Local|Lock|LogicClose|Look|Mask|Men|Method|Movfile|Nap|NewInstance|Next|Nointer|Nohint|Onerrgo|Onintgo|Onkey|Onevent|Openi|Openio|Openo|Opadxd|Order|Order\\s+By|Parse\\s+Instance|Pick|Pikltb|Pmt|Pokltb|Prev|Putseq|Raz|Rdseq|Read|Readlock|Reb|RenameFile|Report|Resume|Return|Rewrite|RewriteByKey|Rollback|Run|Schar|Seek|Selimp|Send|Seldest|Select\\$|SetFCT|SetInstance|SetInstancenosys|Setlbox|Setlob|Setmok|Setmdu|Shortint|Sleep|Sorta|Sql|Stability|Step|Subprog|System|Then|Tinyint|Titcol|To|Trbegin|Transmask|Unlock|Until|Update|Using|Uuident|Value|Variable|Wend|When|Where|While|With|Write|Writeb|Wrseq|Affzo|Effzo|Actzo|Diszo|Chgfmt|Chgtbk|Chgtzn|Chgtfd|Chgstl|Titcol|Discombo|Askui|Blk|Callilog|Callocx|Edi|Getui|Infbox|Listimp|Men|Nap|Pikltb|Pokltb|Pmt|Reb|Run|Seldest|Selimp|Send|SetFCT|Setmdu|Addmen|Additm|Inftxt|Infimg|Opldap|Clldap|Srldapbs|Srldaplv|Srldaptr|Nxldap)(?![A-Za-z0-9_$])"
+        },
+        "variables_or_methods": {
+            "name": "variable.other.x3-4gl",
+            "match": "(?<![A-Za-z0-9_$])(?i:adxdcs|adxdir|adxfname|adxdlrec|adxftl|adxifs|adxirs|adxium|adxlog|adxmda|adxmother|adxsqlrec|adxtct|adxtms|adxtlk|adxuprec|adxwrb|allocgrp|currind|currlen|freemem|freeheap|getAccessorEnabled|isReadonly|maxmem|maxheap|maxtab|modified|nbind|nbzon|nomap|objectnbs|objecttype|objectvar|reckey|revertUpdtick|setAccessorEnabled|snapshot|snapshotEnabled|tairec|this|revertToSnapshot|Updtick)(?![A-Za-z0-9_$])"
+        },
+        "strings": {
+            "name": "string.quoted.double.x3-4gl",
+            "match": "\"([^\"]|\"\")*\""
+        },
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.line.number-sign.x3-4gl",
+                    "match": "#.*$"
+                }
+            ]
+        },
+        "numbers": {
+            "name": "constant.numeric.x3-4gl",
+            "match": "\\b\\d+(\\.\\d+)?\\b"
+        },
+        "operators": {
+            "name": "keyword.operator.x3-4gl",
+            "match": "(?<![A-Za-z0-9_$])(?i:and|or|not|=|!=|<>|<|>|<=|>=|\\+|\\-|\\*|\\/|%)(?![A-Za-z0-9_$])"
+        },
+        "system_variables": {
+            "patterns": [
+                {
+                    "name": "variable.language.x3-4gl",
+                    "match": "\\[[FLMVS]:[A-Za-z0-9_]+\\]"
+                },
+                {
+                    "name": "variable.system.x3-4gl",
+                    "match": "(?<![A-Za-z0-9_$])(?i:SYSTEM|STATUS|FSTAT|CURRBOX|MKSTAT|LOCKWAIT|ADXDLREC|DATESYST|TIME)(?![A-Za-z0-9_$])"
+                }
+            ]
+        }
+    },
+    "scopeName": "source.x3-4gl"
+}

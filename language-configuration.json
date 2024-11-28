@@ -1,0 +1,91 @@
+{
+    "$schema": "https://raw.githubusercontent.com/microsoft/vscode/main/extensions/html/language-configuration.json",
+    "comments": {
+        "lineComment": "#",
+        "blockComment": [
+            "#**",
+            "#*!"
+        ]
+    },
+    "brackets": [
+        [
+            "[",
+            "]"
+        ],
+        [
+            "(",
+            ")"
+        ],
+        [
+            "{",
+            "}"
+        ]
+    ],
+    "autoClosingPairs": [
+        {
+            "open": "[",
+            "close": "]"
+        },
+        {
+            "open": "(",
+            "close": ")"
+        },
+        {
+            "open": "{",
+            "close": "}"
+        },
+        {
+            "open": "\"",
+            "close": "\""
+        },
+        {
+            "open": "'",
+            "close": "'"
+        },
+        {
+            "open": "#**",
+            "close": "#*!"
+        }
+    ],
+    "surroundingPairs": [
+        {
+            "open": "[",
+            "close": "]"
+        },
+        {
+            "open": "(",
+            "close": ")"
+        },
+        {
+            "open": "{",
+            "close": "}"
+        },
+        {
+            "open": "\"",
+            "close": "\""
+        },
+        {
+            "open": "'",
+            "close": "'"
+        }
+    ],
+    "indentationRules": {
+        "increaseIndentPattern": ".*\\b(If|For|Case|Repeat|Subprog|Funprog|While|When|Trbegin)\\b.*$",
+        "decreaseIndentPattern": "^.*\\b(Endif|Next|Endcase|Until|Rollback|Commit)\\b.*$"
+    },
+    "wordPattern": "\\\\b[A-Za-z_][A-Za-z0-9_]*\\\\b",
+    "onEnterRules": [
+        {
+            "beforeText": "^\\s*(?:If|For|Case|Repeat|Subprog|Funprog|While|When|Elsif|Else).*",
+            "action": {
+                "indentAction": "Indent"
+            }
+        },
+        {
+            "beforeText": "^\\s*(?:Endif|Next|Endcase|Until|Wend|Else|Elsif).*",
+            "action": {
+                "indentAction": "Outdent"
+            }
+        }
+    ]
+}
