@@ -1,0 +1,29 @@
+{
+    "For Loop": {
+        "prefix": "for",
+        "body": [
+            "For ${1:variable} = ${2:start} To ${3:end} Step ${4:increment}",
+            "    ${5:// code here}",
+            "Next ${1:variable}"
+        ],
+        "description": "For...Next loop"
+    },
+    "While Loop": {
+        "prefix": "while",
+        "body": [
+            "While ${1:condition}",
+            "    ${2:// code here}",
+            "Wend"
+        ],
+        "description": "While...Wend loop"
+    },
+    "Repeat Until Loop": {
+        "prefix": "repeat",
+        "body": [
+            "Repeat",
+            "    ${1:// code here}",
+            "Until ${2:condition}"
+        ],
+        "description": "Repeat...Until loop"
+    }
+}

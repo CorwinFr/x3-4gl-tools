@@ -1,0 +1,29 @@
+{
+    "If Statement": {
+        "prefix": "if",
+        "body": [
+            "If ${1:condition}",
+            "    ${2:// code here}",
+            "Elsif ${3:other_condition}",
+            "    ${4:// code here}",
+            "Else",
+            "    ${5:// code here}",
+            "Endif"
+        ],
+        "description": "If...Else conditional block"
+    },
+    "Case Statement": {
+        "prefix": "case",
+        "body": [
+            "Case ${1:variable}",
+            "When ${2:value1}",
+            "    ${3:// code here}",
+            "When ${4:value2}",
+            "    ${5:// code here}",
+            "When Default",
+            "    ${6:// default code here}",
+            "Endcase"
+        ],
+        "description": "Case...Endcase conditional block"
+    }
+}

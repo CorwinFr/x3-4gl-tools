@@ -2,7 +2,7 @@
   "name": "x3-4gl-tools",
   "displayName": "X3 4GL Tools",
   "description": "Sage X3 4GL (L4G) development tools for Visual Studio Code, featuring syntax highlighting, code snippets, and other enhancements to streamline your workflow.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": "GuillaumeCLEMENT", 
   "icon": "images/logo.png",
   "engines": {
@@ -26,6 +26,28 @@
       "language": "x3-4gl",
       "scopeName": "source.x3-4gl",
       "path": "./syntaxes/x3-4gl.tmLanguage.json"
-    }]
+    }],
+    "snippets": [
+      {
+        "language": "x3-4gl",
+        "path": "./snippets/x3-4gl-utils.json"
+      },
+      {
+        "language": "x3-4gl",
+        "path": "./snippets/x3-4gl-bdd.json"
+      },
+      {
+        "language": "x3-4gl",
+        "path": "./snippets/x3-4gl-boucles.json"
+      },
+      {
+        "language": "x3-4gl",
+        "path": "./snippets/x3-4gl-conditionnel.json"
+      },
+      {
+        "language": "x3-4gl",
+        "path": "./snippets/x3-4gl-variables.json"
+      }
+    ]
   }
 }

@@ -1,0 +1,23 @@
+{
+    "Declare Local Integer": {
+        "prefix": "local-int",
+        "body": [
+            "Local Integer ${1:variable_name}(${2:dimension})"
+        ],
+        "description": "Declare a local Integer variable"
+    },
+    "Declare Global Char": {
+        "prefix": "global-char",
+        "body": [
+            "Global Char ${1:variable_name}(${2:length})"
+        ],
+        "description": "Declare a global Char variable"
+    },
+    "Assign Variable": {
+        "prefix": "assign",
+        "body": [
+            "${1:variable} = ${2:value}"
+        ],
+        "description": "Variable assignment"
+    }
+}

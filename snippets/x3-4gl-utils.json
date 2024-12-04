@@ -1,0 +1,86 @@
+{
+    "Trace Management": {
+        "prefix": "trace",
+        "body": [
+            "Local Integer ITRACE,ITIME",
+            "Local Char TRACENAME(30)",
+            "",
+            "# Opening TRACE",
+            "TRACENAME=\"${1:Script Name}\"",
+            "",
+            "If GTRACE=''",
+            "    ITRACE=1",
+            "    Call OUVRE_TRACE(TRACENAME) From LECFIC",
+            "    Call ECR_TRACE(TRACENAME + \" - START \" + format$(\"D:\"+GFMDAT,date$) + time$,0) From GESECRAN",
+            "    ITIME=time",
+            "Endif",
+            "",
+            "# Your code here",
+            "${2:# Code block}",
+            "",
+            "# Closing opened TRACE",
+            "If ITRACE = 1",
+            "    Call ECR_TRACE(TRACENAME + \" - END \" + format$(\"D:\"+GFMDAT,date$) + time$,0) From GESECRAN",
+            "    Call FERME_TRACE From LECFIC",
+            "    Call LEC_TRACE From LECFIC",
+            "Endif"
+        ],
+        "description": "Template for trace management with start and end timestamps"
+    },
+    "Info Box": {
+        "prefix": "infobox",
+        "body": [
+            "Infbox \"${1:Your message here}\""
+        ],
+        "description": "Display a simple information box"
+    },
+    "Message Box": {
+        "prefix": "msgbox",
+        "body": [
+            "Call MESSAGE(\"${1:Your message}\") From GESECRAN"
+        ],
+        "description": "Display a message box"
+    },
+    "Yes No Dialog": {
+        "prefix": "yesno",
+        "body": [
+            "Local Integer RESPONSE",
+            "RESPONSE = 2 # Default Yes",
+            "Call OUINON(\"${1:Yes or No question?}\", RESPONSE) From GESECRAN",
+            "If RESPONSE = 2",
+            "    ${2:# User clicked Yes}",
+            "Else",
+            "    ${3:# User clicked No}",
+            "Endif"
+        ],
+        "description": "Display a Yes/No dialog box"
+    },
+    "Warning Dialog": {
+        "prefix": "warning",
+        "body": [
+            "Local Integer RESPONSE",
+            "RESPONSE = 2",
+            "Call AVERTIR(\"${1:Warning: this action cannot be undone}\", RESPONSE) From GESECRAN",
+            "If RESPONSE = 1",
+            "    ${2:# User clicked OK}",
+            "Else",
+            "    ${3:# User clicked Cancel}",
+            "Endif"
+        ],
+        "description": "Display a warning dialog with OK/Cancel buttons"
+    },
+    "Error Message": {
+        "prefix": "error",
+        "body": [
+            "Call ERREURT(\"${1:Error message}\", 1) From GESECRAN"
+        ],
+        "description": "Display an error message"
+    },
+    "Information Message": {
+        "prefix": "info",
+        "body": [
+            "Call ERREURT(\"${1:Information message}\", 0) From GESECRAN"
+        ],
+        "description": "Display an information message"
+    }
+}

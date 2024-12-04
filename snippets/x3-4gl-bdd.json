@@ -1,0 +1,46 @@
+{
+    "Read Statement": {
+        "prefix": "read",
+        "body": [
+            "Read [${1:class}]${2:key}",
+            "If fstat = 0",
+            "    ${3:// code here}",
+            "Endif"
+        ],
+        "description": "Read a record using Read statement"
+    },
+    "Write Statement": {
+        "prefix": "write",
+        "body": [
+            "Trbegin [${1:table}]",
+            "Write [${1:table}]",
+            "If !fstat Then",
+            "    Commit",
+            "Else",
+            "    Rollback",
+            "Endif"
+        ],
+        "description": "Write a record using Write statement"
+    },
+    "Update Statement": {
+        "prefix": "update",
+        "body": [
+            "Update [${1:class}] Where ${2:condition}",
+            "& With ${3:field} = ${4:value}"
+        ],
+        "description": "Update records using Update statement"
+    },
+    "Transaction Block": {
+        "prefix": "transaction",
+        "body": [
+            "Trbegin [${1:table}]",
+            "${2:// code here}",
+            "If !fstat Then",
+            "    Commit",
+            "Else",
+            "    Rollback",
+            "Endif"
+        ],
+        "description": "Transaction block"
+    }
+}
